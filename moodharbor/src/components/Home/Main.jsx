@@ -69,7 +69,7 @@ function Main(){
 
   // fetch quotes
   useEffect(() => {
-    fetch('http://localhost:4000/quotes')
+    fetch('https://moodbackend.onrender.com/quotes')
       .then(response => response.json())
       .then(data => {
         // select one quote at random between 0 and data.length
@@ -159,7 +159,7 @@ function Main(){
           const token = localStorage.getItem('token');
           
     
-          const response = await fetch('http://localhost:4000/logmood/currentmood', {
+          const response = await fetch('https://moodbackend.onrender.com/logmood/currentmood', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -194,7 +194,7 @@ function Main(){
           // Retrieve JWT token from local storage
           const token = localStorage.getItem('token');
     
-          const response = await fetch('http://localhost:4000/logmood/desiredmood', {
+          const response = await fetch('https://moodbackend.onrender.com/logmood/desiredmood', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -231,7 +231,7 @@ function Main(){
           // Retrieve JWT token from local storage
           const token = localStorage.getItem('token');
     
-          const response = await fetch('http://localhost:4000/activities', {
+          const response = await fetch('https://moodbackend.onrender.com/activities', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

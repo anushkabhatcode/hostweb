@@ -37,7 +37,7 @@ const Register = () => {
       if(validateInputs()){
 
         try{
-          const response = await fetch('http://localhost:4000/users/register', {
+          const response = await fetch('https://moodbackend.onrender.com/users/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

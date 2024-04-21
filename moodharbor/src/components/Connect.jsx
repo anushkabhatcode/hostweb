@@ -20,7 +20,7 @@ const Connect = () => {
     const fetchSimilarUsers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://localhost:4000/similarusers', {
+        const response = await fetch('https://moodbackend.onrender.com/similarusers', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

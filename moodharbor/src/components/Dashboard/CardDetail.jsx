@@ -5,7 +5,7 @@ import PopupMessage from '../PopupMessage';
 const sendLike = (name, category) => {
   const token = localStorage.getItem('token');
 
-  fetch('http://localhost:4000/save', {
+  fetch('https://moodbackend.onrender.com/save', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

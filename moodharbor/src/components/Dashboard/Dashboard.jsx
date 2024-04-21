@@ -37,7 +37,7 @@ const Dashboard = () => {
       try {
         const token = localStorage.getItem('token');
         
-        const response = await fetch('http://localhost:4000/stats', {
+        const response = await fetch('https://moodbackend.onrender.com/stats', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

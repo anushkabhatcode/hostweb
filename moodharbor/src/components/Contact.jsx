@@ -24,7 +24,7 @@ const Contact = () => {
     event.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:4000/contact', {
+      const response = await fetch('https://moodbackend.onrender.com/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
