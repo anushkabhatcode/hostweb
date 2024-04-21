@@ -1,0 +1,140 @@
+@import "variables";
+// Header
+header {
+    background-color: $my-bg-color-dark;
+    padding: 5px 20px;
+    text-align: left;
+    color: $custom-text-color;
+    z-index: 1;
+    max-height: 10vh;
+    
+    h1{
+      color: $custom-text-color;
+      font-size: 38px;
+      font-family: 'Brush Script MT', cursive;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    p{
+        // font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: $nav-font;
+        margin-top: 0;
+        font-size: 10pt;
+    }
+  
+    img {
+      height: 50px;
+    }
+    
+    span {
+      justify-content: flex-end;
+      font-size: smaller;
+    }
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+
+  .nav_bar {
+    color: $custom-text-color ;
+    background: $my-bg-color-dark;
+    font-family: $nav-font;
+    display: flex;
+    flex-direction: row;
+    h2{
+      justify-content: center;
+      margin-right: auto;
+      font-size: 25px;
+    }
+
+    p{
+      padding-right:10px;
+      text-align: right;
+      justify-content: flex-end;
+      place-self: center;
+    }
+    .openbtn{
+      // left: 10px; 
+      // top: 10px; 
+      margin-right: auto;
+      align-items: left;
+      
+      z-index: 999; 
+      background: $my-bg-color-dark; 
+      color: $custom-text-color;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 25px;
+    }
+    
+  }
+  
+  
+
+  .sidebar-open {
+    // margin-top: 62px;
+    // height: 60%;
+    height: 70vh;
+    width: 180px;
+    position: fixed;
+    top: auto;
+    left: 0;
+    background-color: $my-bg-color-dark;
+    padding-top: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    // margin-left: 8px;
+    font-family: $nav-font;
+
+    display: flex; //for the logout link and other user details to flex to the bottom
+    
+    .nav-links{
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .bottom_nav_container {
+      margin-top: auto;
+      padding-bottom: 0;
+      
+    }
+  }
+  
+  .sidebar-open a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: $custom-text-color;
+    display: flex;
+    align-items: center;
+
+
+    &:hover {
+      background-color: $side-link-hover;
+      color: $my-bg-color-dark;
+      border-radius: 0 10px 10px 0;
+    }
+
+    &:active {
+      background-color: $side-link-hover;
+      color: $my-bg-color-dark; //not working probably coz the side bar is hidden on click!
+    }
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+  
+
+  .logout-link{
+    @extend a;
+    &:hover {
+      cursor: pointer;
+    }
+  }

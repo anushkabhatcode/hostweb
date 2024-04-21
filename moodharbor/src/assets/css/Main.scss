@@ -1,0 +1,246 @@
+$background-white:white; 
+@import "variables";
+
+.All_Content{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 500px;
+    overflow-x: auto;
+    margin-left: 180px;
+    flex-wrap: wrap;
+    
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.main{
+    background-color: $custom-text-color;
+    margin-right: 180px;
+    padding-left: 10px;
+}
+
+.section-container{
+
+    background-color: $custom-text-color; 
+    color:$custom-text-dark;
+    height:80vh;
+    text-align: center;
+    // margin-left: 180px;
+    display: flex;
+    justify-content: center
+     
+}
+
+.card-sections{
+    @extend .section-container;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.card-sections-dash{
+    @extend .section-container;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: 180px;
+    padding: auto;
+    background-color: $custom-text-color;
+    @media screen and (max-width: 800px) { 
+        flex-direction: column;
+      }
+}
+
+.arrow-button {
+    background-color: $custom-text-dark;
+    color: $custom-text-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    &:hover {
+    background-color: $side-link-hover;
+  }
+  &:active {
+    border-color:  $side-link-hover;
+    border: none;
+  }
+}
+  .arrow-container{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2em;
+  }
+
+  .quote-sections{
+    @extend .card-sections;
+    background-color: white;
+}
+
+.selected-emoji{
+    align-items: center;
+    
+    // padding-left: 10px;
+    
+}
+
+
+.log-mood-section{
+    @extend .quote-sections;
+    margin: 1em;
+    border: 1px solid $form-border;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.title{
+    font-weight: bolder;
+    text-align: center;
+}
+
+.log-mood-sections {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-items: center;
+    align-items: center;
+    margin-left: auto;
+    text-align: center;
+   }
+   
+   .emoji-container {
+    display: flex;
+    flex-direction: column; //remove to keep on one line
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 48%;
+    padding: 5px;
+    background-color: $my-bg-color-light;
+    width: 20%;
+    &:hover{
+        border: 0.5px solid $form-shadow;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+    // &:active{
+    //     border: 0.5px solid $form-shadow;
+    //     // pointer-events: none;
+    //     opacity: 0.9;
+    // }
+    
+   }
+
+   .emoji-container.selected {
+    border: 0.5px solid $form-shadow;
+
+    .large-emoji {
+        filter: grayscale(85%); 
+        opacity: 0.9;
+        cursor: pointer;
+    }
+    .emoji-name {
+        color: gray;
+    }
+
+   }
+
+
+   
+   .emoji-name {
+    margin-top: 2px;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 0;
+   }
+
+.main{    
+    display: flex;
+    flex-direction: row;
+    color:$custom-text-dark;
+    height:40vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 180px;
+    margin-top: auto;
+    padding: 2px;   
+    
+    p{
+        font-size: 25px;
+        font-family: Jazz LET, fantasy;
+        font-weight: bold; 
+    }
+
+    .Nomood{
+        p{
+            font-size: 30px;
+            color:$custom-text-dark;
+        }
+    }
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 180px;
+    gap: 10px;
+    @media(max-width:600px){
+        flex-direction: column;
+    }
+
+}
+
+@media(max-width:600px){
+    .main{
+        flex-direction: column;
+    }
+  }
+.DesiredTrendContainer{
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    .DesiredTrend{
+        align-items: center;
+        justify-content: center;
+        margin-top: 1em;
+    }
+    p{
+        font-size: 22px;
+        font-family: Jazz LET, fantasy;
+        font-weight: bold; 
+    }
+}
+.my-color{
+    background-color: $my-bg-color-light;
+}
+
+
+.large-emoji {
+    font-size: 80px; 
+    // .clicked{
+    //     filter: grayscale(100%)
+    // }
+}
+
+
+.success-message {
+    color: green;
+    font-size: 16px;
+    margin-top: 10px;
+} 

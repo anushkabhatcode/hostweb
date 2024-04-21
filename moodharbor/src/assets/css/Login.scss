@@ -1,0 +1,218 @@
+@import "variables";
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    
+  }
+  
+  .form-container {
+    width: 60%; 
+
+    .login-error{
+      color: $error-color;
+    }
+    
+  }
+
+  
+  .form {
+    padding: 20px;
+    background-color: $custom-text-color; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px $form-shadow; 
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+  }
+  
+  
+  .form-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 38px;
+    color: $light-blue;
+    
+  }
+  .form-label {
+    text-align: left;
+  }  
+  .form-group {
+    margin-bottom: 1em;
+    border-radius: 5px;
+    width: 90%;
+    border: 1px solid $form-border;
+
+  }
+  .form-group2 {
+    @extend .form-group;
+    height: 37px;
+    width: 80%;
+
+  }
+
+  
+  .input-control {
+    input {
+      width: 95%;
+      padding: inherit;
+      font-size: 14px;
+      border: 1px solid $form-border;
+      border-radius: 4px;
+    }
+
+    label {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 5px;
+      
+    }
+    
+    
+    input:focus {
+      outline: 0;
+    }
+    
+    //Form validation
+    .error-message {
+      color: $error-color;
+      font-size: 10px;
+      height: 12px;
+    }
+    &.success {
+      input {
+        border-color: $success-color;
+      }
+    }
+  
+    &.error {
+      input {
+        border-color: $error-color;
+      }
+    }
+    
+
+  }
+
+  .stayLoggedIn {
+    display: flex;
+    gap: 20px; 
+    padding-right: inherit;
+  }
+
+  // Button
+  @mixin button-styles {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: $my-bg-color-dark;
+    border: none;
+    color: $custom-text-color;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    height: 20px;
+    width: 140px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 1px;
+  
+    span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+  
+      &:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: -20px; 
+        transform: rotate(-90deg);
+        transition: 0.5s;
+      }
+    }
+    
+    &:hover {
+        background-color: $light-blue;
+        border-color: $form-shadow;
+    }
+
+    &:hover span {
+      padding-left: 25px; 
+    }
+  
+    &:hover span:after {
+      opacity: 1;
+      left: 0; 
+    }
+  }
+  
+  @mixin respond-to($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+
+  .button {
+    @include button-styles;
+  }
+
+  .button-small {
+    @include button-styles;
+    width: 90px;
+
+    &:disabled {
+      background-color: $form-shadow;
+      color: $custom-text-color;
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.5;
+      
+    }
+  }
+
+  .button-large {
+    @include button-styles;
+    width: 160px;
+  }
+
+.button-section {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 2px
+}
+
+
+
+.contact-container{
+  @extend .login-container;
+  margin-left: 180px;
+  // height: 80vh;
+  width: 80%;
+  margin-top: 50px;
+  textarea, input{
+    border-radius: 5px;
+    border: $form-border;
+    width: 96%;
+    margin-bottom: 1em;
+    &:focus {
+      outline:  1px solid $form-border; 
+    }
+  }
+}
+
+.success-message {
+  color: green;
+  font-size: 16px;
+  margin-top: 10px;
+} 

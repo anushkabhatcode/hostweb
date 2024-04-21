@@ -1,0 +1,217 @@
+.All_Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 500px;
+  overflow-x: auto;
+  margin-left: 180px;
+  flex-wrap: wrap;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: #F2E9E4;
+  margin-right: 180px;
+  padding-left: 10px;
+}
+
+.section-container, .card-sections-dash, .card-sections, .quote-sections, .log-mood-section {
+  background-color: #F2E9E4;
+  color: #22223B;
+  height: 80vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-sections, .quote-sections, .log-mood-section {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.card-sections-dash {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-left: 180px;
+  padding: auto;
+  background-color: #F2E9E4;
+}
+@media screen and (max-width: 800px) {
+  .card-sections-dash {
+    flex-direction: column;
+  }
+}
+
+.arrow-button {
+  background-color: #22223B;
+  color: #F2E9E4;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.arrow-button:hover {
+  background-color: #9A8C98;
+}
+.arrow-button:active {
+  border-color: #9A8C98;
+  border: none;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2em;
+}
+
+.quote-sections, .log-mood-section {
+  background-color: white;
+}
+
+.selected-emoji {
+  align-items: center;
+}
+
+.log-mood-section {
+  margin: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-weight: bolder;
+  text-align: center;
+}
+
+.log-mood-sections {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
+  margin-left: auto;
+  text-align: center;
+}
+
+.emoji-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 48%;
+  padding: 5px;
+  background-color: #F2E9E4;
+  width: 20%;
+}
+.emoji-container:hover {
+  border: 0.5px solid #9A8C98;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.emoji-container.selected {
+  border: 0.5px solid #9A8C98;
+}
+.emoji-container.selected .large-emoji {
+  filter: grayscale(85%);
+  opacity: 0.9;
+  cursor: pointer;
+}
+.emoji-container.selected .emoji-name {
+  color: gray;
+}
+
+.emoji-name {
+  margin-top: 2px;
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  color: #22223B;
+  height: 40vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 180px;
+  margin-top: auto;
+  padding: 2px;
+}
+.main p {
+  font-size: 25px;
+  font-family: Jazz LET, fantasy;
+  font-weight: bold;
+}
+.main .Nomood p {
+  font-size: 30px;
+  color: #22223B;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 180px;
+  gap: 10px;
+}
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+}
+.DesiredTrendContainer {
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  justify-content: center;
+}
+.DesiredTrendContainer .DesiredTrend {
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+.DesiredTrendContainer p {
+  font-size: 22px;
+  font-family: Jazz LET, fantasy;
+  font-weight: bold;
+}
+
+.my-color {
+  background-color: #F2E9E4;
+}
+
+.large-emoji {
+  font-size: 80px;
+}
+
+.success-message {
+  color: green;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=Main.css.map */

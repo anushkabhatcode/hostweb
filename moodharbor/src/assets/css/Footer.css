@@ -1,0 +1,22 @@
+footer {
+  background-color: #22223B;
+  margin-top: auto;
+  padding: 10px;
+  text-align: center;
+  color: #F2E9E4;
+  justify-content: center;
+  font-size: small;
+}
+footer a {
+  color: #4A4E69;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #F2E9E4;
+}
+footer img {
+  height: 100px;
+}
+footer p {
+  padding: 2px;
+}/*# sourceMappingURL=Footer.css.map */

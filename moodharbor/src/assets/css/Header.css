@@ -1,0 +1,112 @@
+header {
+  background-color: #22223B;
+  padding: 5px 20px;
+  text-align: left;
+  color: #F2E9E4;
+  z-index: 1;
+  max-height: 10vh;
+}
+header h1 {
+  color: #F2E9E4;
+  font-size: 38px;
+  font-family: "Brush Script MT", cursive;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+header p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 0;
+  font-size: 10pt;
+}
+header img {
+  height: 50px;
+}
+header span {
+  justify-content: flex-end;
+  font-size: smaller;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_bar {
+  color: #F2E9E4;
+  background: #22223B;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: row;
+}
+.nav_bar h2 {
+  justify-content: center;
+  margin-right: auto;
+  font-size: 25px;
+}
+.nav_bar p {
+  padding-right: 10px;
+  text-align: right;
+  justify-content: flex-end;
+  place-self: center;
+}
+.nav_bar .openbtn {
+  margin-right: auto;
+  align-items: left;
+  z-index: 999;
+  background: #22223B;
+  color: #F2E9E4;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.sidebar-open {
+  height: 70vh;
+  width: 180px;
+  position: fixed;
+  top: auto;
+  left: 0;
+  background-color: #22223B;
+  padding-top: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+}
+.sidebar-open .nav-links {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-open .bottom_nav_container {
+  margin-top: auto;
+  padding-bottom: 0;
+}
+
+.sidebar-open a, .sidebar-open .logout-link {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #F2E9E4;
+  display: flex;
+  align-items: center;
+}
+.sidebar-open a:hover, .sidebar-open .logout-link:hover {
+  background-color: #9A8C98;
+  color: #22223B;
+  border-radius: 0 10px 10px 0;
+}
+.sidebar-open a:active, .sidebar-open .logout-link:active {
+  background-color: #9A8C98;
+  color: #22223B;
+}
+.sidebar-open a svg, .sidebar-open .logout-link svg {
+  margin-right: 8px;
+}
+
+.logout-link:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Header.css.map */
