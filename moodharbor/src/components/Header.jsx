@@ -8,7 +8,7 @@ import Sidebar from './Sidebar';
 const Header = ({ title, subtitle, name, pageTitle }) => {
     const location = useLocation();
 
-    if (location.pathname === "/") {
+    if (location.pathname === "/" || location.pathname === "/register") {
         return (
             <header>
                 <img src={logoImg} alt="logo" />

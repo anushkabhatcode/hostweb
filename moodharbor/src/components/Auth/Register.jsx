@@ -113,7 +113,7 @@ const Register = () => {
     if (!data.password.trim()) {
       newErrors.password = 'Password is required';
     } else if (!isValidPassword(data.password.trim())) {
-        newErrors.password = 'Weak Password: Your password must be have at least 8 characters long, 1 uppercase & 1 lowercase character, 1 number & 1 symbol';
+        newErrors.password = 'Weak Password: Minimum 8 characters, 1 uppercase, 1 lowercase, 1 number & 1 symbol';
         hasError = true;
     } else { 
     }
@@ -156,11 +156,11 @@ const Register = () => {
               {/* Adding an email field */}
               <div className={`input-control ${errors.email ? 'error' : (data.email ? 'success' : '')}`}>
                 <label className="form-label" >
-                  Email
+                  Email Address
                   <input type="text" 
                   name="email" 
                   className='form-group' 
-                  placeholder='Enter Your Email'
+                  placeholder='Enter Your Email Address'
                   autoComplete="new-password"
                   value={data.email}
                   onChange={handleChange}
