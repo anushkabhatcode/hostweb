@@ -21,6 +21,8 @@ The database is hosted on Azure
 
 **Run the frontend** using npm run dev
 
+Link to Hosted website : https://boostyourmood.vercel.app/
+
 
 <h3>Tech Stack</h3>
 
