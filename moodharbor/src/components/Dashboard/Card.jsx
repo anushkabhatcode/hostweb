@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 const Card = ({ icon, itemName, description }) => {
   return (
       <div className="card">
-        <Link to="/">          
+               
           <div className="card-content">
             <div className="mood-name">
               {icon && <span className="icon">{icon}</span>}
@@ -25,7 +25,7 @@ const Card = ({ icon, itemName, description }) => {
             <div className="description">{description}</div>
             
           </div>
-        </Link>
+        
       </div>
   );
 };
